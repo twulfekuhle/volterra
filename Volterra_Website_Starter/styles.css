@@ -90,16 +90,29 @@ footer { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 28px; 
 footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: none; margin-top: 12px; }
 
 /* Mobile Adjustments */
+.mobile-menu { display: none; color: #fff; cursor: pointer; }
+
 @media (max-width: 900px) {
   nav, .btn.small { display: none; }
+  .mobile-menu { display: block; margin-left: auto; }
+  
+  /* Shrink header logo for mobile so it fits nicely */
+  .brand-logo { height: 36px; } 
+  header { padding: 0 5vw; }
+
+  /* Keep hero text tight on small screens */
+  .hero { min-height: 70vh; padding: 120px 5vw 60px; }
+  .hero h1 { font-size: clamp(32px, 9vw, 50px); margin: 12px 0 20px; }
+  
   .shade { background: linear-gradient(90deg, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.85) 100%); }
   .capabilities { grid-template-columns: 1fr 1fr; border-top: none; }
   .capabilities div { border-bottom: 1px solid #1a2730; }
-  .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; }
+  .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; padding: 50px 5vw; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
   .landscapes { grid-template-columns: 1fr; }
   .cta { flex-direction: column; align-items: flex-start; }
-  footer { grid-template-columns: 1fr 1fr; }
+  footer { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 5vw; }
+  .footer-logo { height: 40px; }
   .panel, .field, .campus-art { min-height: 350px; }
   .field::before, .campus-art::before { background: linear-gradient(to bottom, #08131b 0%, transparent 30%); }
 }
@@ -108,4 +121,5 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .actions { flex-direction: column; align-items: stretch; }
   .actions .btn { text-align: center; }
   .capabilities, .industry-grid, footer { grid-template-columns: 1fr; }
+  .capabilities div { padding: 30px 20px; border-right: none; }
 }
