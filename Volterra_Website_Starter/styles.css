@@ -97,7 +97,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .mobile-menu { display: block; margin-left: auto; }
   
   /* Shrink header logo for mobile so it fits nicely */
-  .brand-logo { height: 36px; } 
+ .brand-logo { height: 48px; }
   header { padding: 0 5vw; }
 
   /* Keep hero text tight on small screens */
