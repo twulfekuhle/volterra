@@ -33,7 +33,7 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 /* Capabilities */
 .capabilities { display: grid; grid-template-columns: repeat(4, 1fr); background: #0c161d; border-top: 1px solid #1a2730; }
 .capabilities div { padding: 48px 22px; text-align: center; border-right: 1px solid #1a2730; display: flex; flex-direction: column; align-items: center; }
-.cap-icon { width: 50px; height: 50px; max-width: 50px; margin-bottom: 20px; color: #fff; opacity: 0.9; stroke-width: 1px; }
+.cap-icon { width: 64px; height: 64px; object-fit: contain; margin-bottom: 12px; }
 .capabilities b { display: block; text-transform: uppercase; font-size: 15px; }
 .capabilities span { display: flex; align-items: center; justify-content: center; gap: 6px; color: #aeb8bf; font-size: 12px; margin-top: 8px; transition: 0.2s; cursor: pointer; }
 .capabilities span:hover { color: #fff; }
@@ -47,7 +47,7 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .industry-grid article { min-height: 400px; padding: 30px 20px; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; text-transform: uppercase; font-weight: 700; color: white; position: relative; background-size: cover; background-position: center; }
 .card-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
-.ind-icon { width: 38px; height: 38px; color: #fff; }
+.ind-icon { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; }
 .industry-grid article::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 60%); z-index: 1; }
 .ag { background-image: url('industry-ag.jpg'); }
 .energy { background-image: url('industry-energy.png'); }
