@@ -53,8 +53,8 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 .ind-icon { height: 75px; width: auto; max-width: 90px; object-fit: contain; margin-bottom: 15px; }.industry-grid article::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 60%); z-index: 1; }
 .ag { background-image: url('industry-ag.jpg'); }
 .energy { background-image: url('industry-energy.png'); }
-.infra { background-image: url('industry-events.jpg'); }
-.emerging { background-image: url('industry-aerial.png'); }
+.infra { background-image: url('infrastructure-picture.png'); }
+.emerging { background-image: url('emerging-picture.png'); }
 
 /* Split Panels (Crewed/Uncrewed) */
 .split { display: grid; grid-template-columns: 1fr 1fr; }
@@ -63,7 +63,7 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 .panel h2 { font-size: clamp(28px, 3vw, 36px); text-shadow: 0 2px 10px rgba(0,0,0,0.6); margin: 10px 0 0; }
 .panel::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(7,16,25,0.9) 0%, transparent 80%), linear-gradient(to top, rgba(7,16,25,0.6) 0%, transparent 50%); z-index: 1; }
 .crewed { background-image: url('crewed-r44.png'); }
-.uncrewed { background: linear-gradient(145deg, #0d1820, #314b5d); }
+.uncrewed { background: linear-gradient(to top, rgba(0,0,0,0.9), transparent 60%), url('unmanned-aviation.webp'); background-size: cover; background-position: center; }
 
 /* Ag Section */
 .ag-section { display: grid; grid-template-columns: 1fr 1.4fr; background: #08131b; }
@@ -74,9 +74,9 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 /* Landscapes Grid */
 .landscapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .landscapes div { min-height: 260px; background-size: cover; background-position: center; }
-.landscape-1 { background-image: url('landscape1.jpg'); }
-.landscape-2 { background-image: url('landscape2.jpg'); }
-.landscape-3 { background-image: url('landscape3.jpg'); }
+.landscape-1 { background-image: url('mission-ready-1.png'); }
+.landscape-2 { background-image: url('mission-ready-2.png'); }
+.landscape-3 { background-image: url('mission-ready-3.png'); }
 
 /* Campus */
 .campus { display: grid; grid-template-columns: 0.8fr 1.7fr; min-height: 450px; background: #0c1820; }
@@ -85,7 +85,7 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 .campus-art::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #0c1820 0%, transparent 40%); }
 
 /* Footer & CTA */
-.cta { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 58px 5vw; background: linear-gradient(100deg, #101c24, #4a3726); }
+.cta { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 58px 5vw; background: linear-gradient(100deg, rgba(16,28,36,0.9), rgba(74,55,38,0.8)), url('move-aviation-forward.webp') center/cover no-repeat; }
 .cta p { max-width: 740px; color: #d5dadd; }
 footer { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 28px; padding: 60px 5vw; background: #071016; font-size: 12px; text-transform: uppercase; }
 .footer-logo { height: 60px; width: auto; display: block; margin-bottom: 20px; }
