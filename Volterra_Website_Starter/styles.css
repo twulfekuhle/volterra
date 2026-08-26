@@ -51,10 +51,10 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 .industry-grid article { min-height: 400px; padding: 30px 20px; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; text-transform: uppercase; font-weight: 700; color: white; position: relative; background-size: cover; background-position: center; }
 .card-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
 .ind-icon { height: 75px; width: auto; max-width: 90px; object-fit: contain; margin-bottom: 15px; }.industry-grid article::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 60%); z-index: 1; }
-.ag { background-image: url('industry-ag.jpg'); }
-.energy { background-image: url('industry-energy.png'); }
-.infra { background-image: url('infrastructure-picture.png'); }
-.emerging { background-image: url('emerging-picture.png'); }
+.ag { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-ag.jpg'); background-size: cover; background-position: center; }
+.energy { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-energy.png'); background-size: cover; background-position: center; }
+.infra { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('infrastructure-picture.png'); background-size: cover; background-position: center; }
+.emerging { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('emerging-picture.png'); background-size: cover; background-position: center; }
 
 /* Split Panels (Crewed/Uncrewed) */
 .split { display: grid; grid-template-columns: 1fr 1fr; }
@@ -62,8 +62,8 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 .panel-content { position: relative; z-index: 2; }
 .panel h2 { font-size: clamp(28px, 3vw, 36px); text-shadow: 0 2px 10px rgba(0,0,0,0.6); margin: 10px 0 0; }
 .panel::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(7,16,25,0.9) 0%, transparent 80%), linear-gradient(to top, rgba(7,16,25,0.6) 0%, transparent 50%); z-index: 1; }
-.crewed { background-image: url('crewed-r44.png'); }
-.uncrewed { background: linear-gradient(to top, rgba(0,0,0,0.9), transparent 60%), url('unmanned-aviation.webp'); background-size: cover; background-position: center; }
+.crewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.9) 0%, transparent 60%), url('crewed-r44.png'); background-size: cover; background-position: center; }
+.uncrewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.9) 0%, transparent 60%), url('unmanned-aviation.webp'); background-size: cover; background-position: center; }
 
 /* Ag Section */
 .ag-section { display: grid; grid-template-columns: 1fr 1.4fr; background: #08131b; }
@@ -81,7 +81,7 @@ img[src="icon-aircraft.png"] { height: 115px; margin-bottom: -2px; }
 /* Campus */
 .campus { display: grid; grid-template-columns: 0.8fr 1.7fr; min-height: 450px; background: #0c1820; }
 .campus > div:first-child { padding: 72px 5vw; display: flex; flex-direction: column; justify-content: center; }
-.campus-art { background: url('campus-bg.jpg') center/cover no-repeat; min-height: 450px; position: relative; }
+.campus-art { background: linear-gradient(to right, #0c1820 0%, rgba(12,24,32,0.1) 50%), url('campus-pic.png') center/cover no-repeat; min-height: 450px; position: relative; }
 .campus-art::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #0c1820 0%, transparent 40%); }
 
 /* Footer & CTA */
