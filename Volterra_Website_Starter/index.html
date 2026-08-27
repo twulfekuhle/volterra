@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   <header>
@@ -27,6 +27,10 @@
   </header>
 
   <section class="hero">
+    <!-- NEW BACKGROUND VIDEO -->
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
     <div class="shade"></div>
     <div class="copy">
       <h1><strong>ADVANCING<br>AVIATION.</strong><br>EXPANDING<br>WHAT’S POSSIBLE.</h1>
@@ -46,7 +50,6 @@
     <div class="bg-title" id="bg-title">R88</div>
 
     <div class="carousel-container">
-      <!-- Fixed class name here -->
       <button class="slider-btn prev" onclick="moveSlide(-1)">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
@@ -186,7 +189,6 @@
   </footer>
 
   <script>
-    // JS for the Robinson Slider
     const slideData = [
       { bg: "R88", series: "R88 Series", title: "R88", desc: "<strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite." },
       { bg: "R66", series: "R66 Series", title: "R66 Turbine", desc: "<strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine." },
