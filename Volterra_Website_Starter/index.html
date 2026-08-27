@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <header>
@@ -27,7 +27,6 @@
   </header>
 
   <section class="hero">
-    <!-- NEW BACKGROUND VIDEO -->
     <video autoplay loop muted playsinline class="hero-video">
       <source src="hero-video.mp4" type="video/mp4">
     </video>
@@ -47,7 +46,7 @@
 
   <!-- ROBINSON-STYLE SLIDER -->
   <section class="heli-slider" id="solutions">
-    <div class="bg-title" id="bg-title">R88</div>
+    <div class="bg-title" id="bg-title">R66</div>
 
     <div class="carousel-container">
       <button class="slider-btn prev" onclick="moveSlide(-1)">
@@ -57,13 +56,14 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
 
-      <div class="carousel-track-wrapper">
+      <div class="carousel-track-wrapper" id="swipe-area">
         <div class="carousel-track" id="track">
-          <div class="slide" onclick="setSlide(0)"><img src="heli-r88.webp" alt="R88"></div>
-          <div class="slide" onclick="setSlide(1)"><img src="heli-r66.png" alt="R66"></div>
+          <!-- Reordered: R66, Sprayhawk, R44, R88, R22 -->
+          <div class="slide" onclick="setSlide(0)"><img src="heli-r66.png" alt="R66"></div>
+          <div class="slide" onclick="setSlide(1)"><img src="heli-sprayhawk.png" alt="Sprayhawk"></div>
           <div class="slide" onclick="setSlide(2)"><img src="heli-r44.png" alt="R44"></div>
-          <div class="slide" onclick="setSlide(3)"><img src="heli-r22.png" alt="R22"></div>
-          <div class="slide" onclick="setSlide(4)"><img src="heli-sprayhawk.png" alt="Sprayhawk"></div>
+          <div class="slide" onclick="setSlide(3)"><img src="heli-r88.webp" alt="R88"></div>
+          <div class="slide" onclick="setSlide(4)"><img src="heli-r22.png" alt="R22"></div>
         </div>
       </div>
     </div>
@@ -77,9 +77,9 @@
     </div>
 
     <div class="carousel-content">
-      <p class="series" id="c-series">R88 Series</p>
-      <h2 id="c-title">R88</h2>
-      <p id="c-desc"><strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite.</p>
+      <p class="series" id="c-series">R66 Series</p>
+      <h2 id="c-title">R66 Turbine</h2>
+      <p id="c-desc"><strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine.</p>
       <a href="#contact" class="btn yellow">Learn More</a>
     </div>
   </section>
@@ -189,12 +189,13 @@
   </footer>
 
   <script>
+    // Reordered Data Array
     const slideData = [
-      { bg: "R88", series: "R88 Series", title: "R88", desc: "<strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite." },
       { bg: "R66", series: "R66 Series", title: "R66 Turbine", desc: "<strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine." },
+      { bg: "UAV", series: "Unmanned Series", title: "R44 Sprayhawk", desc: "<strong>ADVANCED AGRICULTURAL AVIATION.</strong> The unmanned R44 Sprayhawk combines Robinson's proven helicopter platform with cutting-edge autonomous technology for high-efficiency, precision aerial application." },
       { bg: "R44", series: "R44 Series", title: "R44 Raven II", desc: "<strong>THE WORLD'S BEST-SELLING GENERAL AVIATION HELICOPTER.</strong> The four-seat R44 Raven II delivers the performance of an expensive turbine helicopter at an affordable piston price. Its sleek design, impressive speed, and unparalleled reliability make it a favorite." },
-      { bg: "R22", series: "R22 Series", title: "R22 Beta II", desc: "<strong>THE INDUSTRY STANDARD FOR TRAINING.</strong> The two-seat R22 Beta II is a proven workhorse that delivers exceptional performance in a variety of applications. It has a two-bladed rotor system and is powered by a proven Lycoming O-360 engine." },
-      { bg: "UAV", series: "Unmanned Series", title: "R44 Sprayhawk", desc: "<strong>ADVANCED AGRICULTURAL AVIATION.</strong> The unmanned R44 Sprayhawk combines Robinson's proven helicopter platform with cutting-edge autonomous technology for high-efficiency, precision aerial application." }
+      { bg: "R88", series: "R88 Series", title: "R88", desc: "<strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite." },
+      { bg: "R22", series: "R22 Series", title: "R22 Beta II", desc: "<strong>THE INDUSTRY STANDARD FOR TRAINING.</strong> The two-seat R22 Beta II is a proven workhorse that delivers exceptional performance in a variety of applications. It has a two-bladed rotor system and is powered by a proven Lycoming O-360 engine." }
     ];
 
     let currentIndex = 0;
@@ -225,6 +226,21 @@
 
     function moveSlide(dir) { setSlide(currentIndex + dir); }
     setSlide(0);
+
+    // Touch Swipe Logic for Mobile
+    let touchstartX = 0;
+    let touchendX = 0;
+    const swipeArea = document.getElementById('swipe-area');
+
+    swipeArea.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX;
+    });
+
+    swipeArea.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX;
+      if (touchendX < touchstartX - 40) moveSlide(1);  // Swipe Left
+      if (touchendX > touchstartX + 40) moveSlide(-1); // Swipe Right
+    });
   </script>
 </body>
 </html>
