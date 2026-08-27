@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <header>
@@ -41,15 +41,16 @@
     </div>
   </section>
 
-  <!-- NEW ROBINSON-STYLE SLIDER -->
+  <!-- ROBINSON-STYLE SLIDER -->
   <section class="heli-slider" id="solutions">
     <div class="bg-title" id="bg-title">R88</div>
 
     <div class="carousel-container">
-      <button class="arrow prev" onclick="moveSlide(-1)">
+      <!-- Fixed class name here -->
+      <button class="slider-btn prev" onclick="moveSlide(-1)">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
-      <button class="arrow next" onclick="moveSlide(1)">
+      <button class="slider-btn next" onclick="moveSlide(1)">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
 
@@ -208,7 +209,6 @@
       if(index >= slides.length) index = 0;
       currentIndex = index;
 
-      // CSS variables handle perfect centering on all screen sizes automatically!
       track.style.transform = `translateX(calc(var(--center-offset) - (var(--slide-width) * ${currentIndex})))`;
 
       slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
@@ -222,7 +222,7 @@
     }
 
     function moveSlide(dir) { setSlide(currentIndex + dir); }
-    setSlide(0); // Initialize first slide
+    setSlide(0);
   </script>
 </body>
 </html>

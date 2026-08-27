@@ -19,11 +19,11 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .outline { background: transparent; border-color: #fff; }
 .outline:hover { background: #fff; color: #081118; }
 
-/* Text Links & Arrows */
+/* Text Links & Arrows (Restored the .arrow class for the inline links) */
 .text-link { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-top: 24px; transition: 0.2s; }
 .text-link.blue { color: #43a5df; }
 .text-link:hover { opacity: 0.7; }
-.arrow-icon { width: 14px; height: 14px; vertical-align: middle; stroke: currentColor; }
+.arrow { width: 14px; height: 14px; vertical-align: middle; stroke: currentColor; }
 
 /* Hero Section */
 .hero { min-height: 85vh; position: relative; display: flex; align-items: center; padding: 120px 6vw 70px; background: url('hero-grainbins.png') center/cover no-repeat; }
@@ -42,11 +42,12 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .bg-title { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 28vw; font-weight: 800; color: rgba(0,0,0,0.03); z-index: 1; pointer-events: none; line-height: 1; margin: 0; }
 
 .carousel-container { position: relative; z-index: 2; width: 100%; max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
-.arrow { background: transparent; border: 1px solid #121a20; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); }
-.arrow:hover { background: #121a20; color: #fff; }
-.arrow.prev { left: 5vw; }
-.arrow.next { right: 5vw; }
-@media(min-width: 1400px) { .arrow.prev { left: 10px; } .arrow.next { right: 10px; } }
+/* Changed to .slider-btn so it doesn't conflict with text link arrows */
+.slider-btn { background: transparent; border: 1px solid #121a20; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); }
+.slider-btn:hover { background: #121a20; color: #fff; }
+.slider-btn.prev { left: 5vw; }
+.slider-btn.next { right: 5vw; }
+@media(min-width: 1400px) { .slider-btn.prev { left: 10px; } .slider-btn.next { right: 10px; } }
 
 .carousel-track-wrapper { width: 100%; overflow: hidden; padding: 20px 0; }
 .carousel-track { display: flex; transition: transform 0.5s ease; width: 100%; align-items: center; }
@@ -132,7 +133,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   
   .shade { background: linear-gradient(90deg, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.85) 100%); }
   
-  .arrow { display: none; } /* Hide arrows on mobile to prefer swiping/tapping */
+  .slider-btn { display: none; } /* Hide slider arrows on mobile */
   .carousel-content h2 { font-size: 38px; }
 
   .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; padding: 50px 5vw; }
