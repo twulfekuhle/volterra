@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
   <header>
@@ -41,31 +41,46 @@
     </div>
   </section>
 
-  <section class="heli-fleet" id="solutions">
-    <div class="fleet-header">
-      <h2>The Robinson Fleet</h2>
-      <p>Proven reliability. Unmatched performance.</p>
+  <!-- NEW ROBINSON-STYLE SLIDER -->
+  <section class="heli-slider" id="solutions">
+    <div class="bg-title" id="bg-title">R88</div>
+
+    <div class="carousel-container">
+      <button class="arrow prev" onclick="moveSlide(-1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="arrow next" onclick="moveSlide(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="track">
+          <div class="slide" onclick="setSlide(0)"><img src="heli-r88.webp" alt="R88"></div>
+          <div class="slide" onclick="setSlide(1)"><img src="heli-r66.png" alt="R66"></div>
+          <div class="slide" onclick="setSlide(2)"><img src="heli-r44.png" alt="R44"></div>
+          <div class="slide" onclick="setSlide(3)"><img src="heli-r22.png" alt="R22"></div>
+          <div class="slide" onclick="setSlide(4)"><img src="heli-sprayhawk.png" alt="Sprayhawk"></div>
+        </div>
+      </div>
     </div>
-    <div class="fleet-slider">
-      <div class="heli-card">
-        <img src="heli-r22.png" alt="R22 Helicopter">
-        <h3>R22</h3>
-      </div>
-      <div class="heli-card">
-        <img src="heli-r44.png" alt="R44 Helicopter">
-        <h3>R44</h3>
-      </div>
-      <div class="heli-card">
-        <img src="heli-r66.png" alt="R66 Helicopter">
-        <h3>R66</h3>
-      </div>
-      <div class="heli-card">
-        <img src="heli-sprayhawk.png" alt="R44 Sprayhawk">
-        <h3>Sprayhawk</h3>
-      </div>
+
+    <div class="carousel-dots" id="dots">
+      <span class="dot" onclick="setSlide(0)"></span>
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+      <span class="dot" onclick="setSlide(3)"></span>
+      <span class="dot" onclick="setSlide(4)"></span>
+    </div>
+
+    <div class="carousel-content">
+      <p class="series" id="c-series">R88 Series</p>
+      <h2 id="c-title">R88</h2>
+      <p id="c-desc"><strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite.</p>
+      <a href="#contact" class="btn yellow">Learn More</a>
     </div>
   </section>
 
+  <!-- AUTHORIZED DEALER BANNER -->
   <section class="auth-dealer">
     <img src="robinson-authorized-dealer.png" alt="Robinson Authorized Dealer">
   </section>
@@ -168,5 +183,46 @@
     <div>Company<br><span>About Volterra<br>Industries</span></div>
     <div>Contact<br><span>info@volterraus.com<br>2144 Old Hwy 218 S<br>Iowa City, IA 52246</span></div>
   </footer>
+
+  <script>
+    // JS for the Robinson Slider
+    const slideData = [
+      { bg: "R88", series: "R88 Series", title: "R88", desc: "<strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite." },
+      { bg: "R66", series: "R66 Series", title: "R66 Turbine", desc: "<strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine." },
+      { bg: "R44", series: "R44 Series", title: "R44 Raven II", desc: "<strong>THE WORLD'S BEST-SELLING GENERAL AVIATION HELICOPTER.</strong> The four-seat R44 Raven II delivers the performance of an expensive turbine helicopter at an affordable piston price. Its sleek design, impressive speed, and unparalleled reliability make it a favorite." },
+      { bg: "R22", series: "R22 Series", title: "R22 Beta II", desc: "<strong>THE INDUSTRY STANDARD FOR TRAINING.</strong> The two-seat R22 Beta II is a proven workhorse that delivers exceptional performance in a variety of applications. It has a two-bladed rotor system and is powered by a proven Lycoming O-360 engine." },
+      { bg: "UAV", series: "Unmanned Series", title: "R44 Sprayhawk", desc: "<strong>ADVANCED AGRICULTURAL AVIATION.</strong> The unmanned R44 Sprayhawk combines Robinson's proven helicopter platform with cutting-edge autonomous technology for high-efficiency, precision aerial application." }
+    ];
+
+    let currentIndex = 0;
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const bgTitle = document.getElementById('bg-title');
+    const cSeries = document.getElementById('c-series');
+    const cTitle = document.getElementById('c-title');
+    const cDesc = document.getElementById('c-desc');
+
+    function setSlide(index) {
+      if(index < 0) index = slides.length - 1;
+      if(index >= slides.length) index = 0;
+      currentIndex = index;
+
+      // CSS variables handle perfect centering on all screen sizes automatically!
+      track.style.transform = `translateX(calc(var(--center-offset) - (var(--slide-width) * ${currentIndex})))`;
+
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+
+      const data = slideData[currentIndex];
+      bgTitle.textContent = data.bg;
+      cSeries.textContent = data.series;
+      cTitle.textContent = data.title;
+      cDesc.innerHTML = data.desc;
+    }
+
+    function moveSlide(dir) { setSlide(currentIndex + dir); }
+    setSlide(0); // Initialize first slide
+  </script>
 </body>
 </html>
