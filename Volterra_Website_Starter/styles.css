@@ -77,8 +77,10 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .industry-grid article { min-height: 400px; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-transform: uppercase; position: relative; cursor: pointer; overflow: hidden; }
 .card-content { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; }
-.industry-title { font-size: clamp(40px, 4vw, 56px); font-weight: 800; color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8); writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.1em; transition: 0.4s ease; margin: 0; }
-.industry-grid article:hover .industry-title { color: #ffffff; -webkit-text-stroke: 0px; transform: rotate(180deg) scale(1.05); }
+
+/* Solid Fill Text */
+.industry-title { font-size: clamp(40px, 4vw, 56px); font-weight: 800; color: #ffffff; writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.1em; transition: 0.4s ease; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.industry-grid article:hover .industry-title { transform: rotate(180deg) scale(1.05); }
 
 .ag { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-ag.jpg'); background-size: cover; background-position: center; }
 .energy { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-energy.png'); background-size: cover; background-position: center; }
@@ -133,10 +135,8 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .hero { min-height: 70vh; padding: 120px 5vw 60px; }
   .hero h1 { font-size: clamp(32px, 9vw, 50px); margin: 12px 0 20px; }
   
-  /* Lighter gradient for mobile so video is more visible */
   .shade { background: linear-gradient(90deg, rgba(7,16,25,0.85) 0%, rgba(7,16,25,0.2) 100%); }
   
-  /* Show smaller arrows on mobile edges */
   .slider-btn { width: 36px; height: 36px; }
   .slider-btn.prev { left: 1vw; }
   .slider-btn.next { right: 1vw; }
