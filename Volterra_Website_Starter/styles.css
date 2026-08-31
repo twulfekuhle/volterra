@@ -11,9 +11,9 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 72px; 
 .brand-logo { height: 60px; width: auto; display: block; margin-right: auto; }
 nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
 
-/* RED GRADIENT BUTTONS (Darker border, slightly reduced padding) */
-.btn { display: inline-block; padding: 14px 24px; background: linear-gradient(135deg, #8a0000 0%, #b30000 75%, #ff1a1a 100%); border: 1px solid #8a0000; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
-.btn:hover { background: linear-gradient(135deg, #a30000 0%, #cc0000 75%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #a30000; transform: translateY(-2px); }
+/* RED GRADIENT BUTTONS (Reduced dark stop to 60% so more light red shines through) */
+.btn { display: inline-block; padding: 14px 24px; background: linear-gradient(135deg, #8a0000 0%, #b30000 60%, #ff1a1a 100%); border: 1px solid #8a0000; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
+.btn:hover { background: linear-gradient(135deg, #a30000 0%, #cc0000 60%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #a30000; transform: translateY(-2px); }
 .btn.small { padding: 11px 16px; font-size: 12px; }
 
 /* Outline Button Variation */
@@ -146,6 +146,11 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 
   .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; padding: 50px 5vw; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
+  
+  /* FLIP TITLES TO HORIZONTAL ON MOBILE/TABLET */
+  .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
+  .industry-grid article:hover .industry-title { transform: scale(1.05); }
+
   .landscapes { grid-template-columns: 1fr; }
   .cta { flex-direction: column; align-items: flex-start; }
   footer { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 5vw; }
@@ -159,6 +164,6 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .actions { flex-direction: column; align-items: stretch; }
   .actions .btn { text-align: center; }
   .industry-grid, footer { grid-template-columns: 1fr; }
-  .industry-grid article { min-height: 250px; }
-  .industry-title { font-size: 36px; }
+  .industry-grid article { min-height: 200px; }
+  .industry-title { font-size: 32px; }
 }
