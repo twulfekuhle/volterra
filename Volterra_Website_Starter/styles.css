@@ -11,9 +11,9 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 72px; 
 .brand-logo { height: 60px; width: auto; display: block; margin-right: auto; }
 nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
 
-/* RED GRADIENT BUTTONS (Darker middle, larger text) */
-.btn { display: inline-block; padding: 16px 26px; background: linear-gradient(90deg, #ff1a1a 0%, #990000 50%, #ff1a1a 100%); border: 1px solid #ff3333; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
-.btn:hover { background: linear-gradient(90deg, #ff4d4d 0%, #cc0000 50%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #ff6666; transform: translateY(-2px); }
+/* RED GRADIENT BUTTONS (Darker middle takes up ~90% of the space) */
+.btn { display: inline-block; padding: 16px 26px; background: linear-gradient(90deg, #ff1a1a 0%, #990000 5%, #990000 95%, #ff1a1a 100%); border: 1px solid #ff3333; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
+.btn:hover { background: linear-gradient(90deg, #ff4d4d 0%, #cc0000 5%, #cc0000 95%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #ff6666; transform: translateY(-2px); }
 .btn.small { padding: 12px 18px; font-size: 12px; }
 
 /* Outline Button Variation */
