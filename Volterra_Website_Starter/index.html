@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
   <header>
@@ -58,7 +58,6 @@
 
       <div class="carousel-track-wrapper" id="swipe-area">
         <div class="carousel-track" id="track">
-          <!-- Reordered: R66, Sprayhawk, R44, R88, R22 -->
           <div class="slide" onclick="setSlide(0)"><img src="heli-r66.png" alt="R66"></div>
           <div class="slide" onclick="setSlide(1)"><img src="heli-sprayhawk.png" alt="Sprayhawk"></div>
           <div class="slide" onclick="setSlide(2)"><img src="heli-r44.png" alt="R44"></div>
@@ -99,26 +98,22 @@
     <div class="industry-grid">
       <article class="ag">
         <div class="card-content">
-          <img src="icon-ag.png" alt="Agriculture" class="ind-icon">
-          <span>Agriculture</span>
+          <span class="industry-title">Agriculture</span>
         </div>
       </article>
       <article class="energy">
         <div class="card-content">
-          <img src="icon-energy.png" alt="Energy" class="ind-icon">
-          <span>Energy</span>
+          <span class="industry-title">Energy</span>
         </div>
       </article>
       <article class="infra">
         <div class="card-content">
-          <img src="icon-infra.png" alt="Infrastructure" class="ind-icon">
-          <span>Infrastructure</span>
+          <span class="industry-title">Infrastructure</span>
         </div>
       </article>
       <article class="emerging">
         <div class="card-content">
-          <img src="icon-emerging.png" alt="Emerging" class="ind-icon">
-          <span>Emerging</span>
+          <span class="industry-title">Emerging</span>
         </div>
       </article>
     </div>
@@ -238,8 +233,8 @@
 
     swipeArea.addEventListener('touchend', e => {
       touchendX = e.changedTouches[0].screenX;
-      if (touchendX < touchstartX - 40) moveSlide(1);  // Swipe Left
-      if (touchendX > touchstartX + 40) moveSlide(-1); // Swipe Right
+      if (touchendX < touchstartX - 40) moveSlide(1);  
+      if (touchendX > touchstartX + 40) moveSlide(-1); 
     });
   </script>
 </body>
