@@ -11,27 +11,28 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 72px; 
 .brand-logo { height: 60px; width: auto; display: block; margin-right: auto; }
 nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
 
-.btn { display: inline-block; padding: 14px 20px; background: #1d6fa4; border: 1px solid #1d6fa4; text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: .05em; transition: 0.2s; cursor: pointer; }
-.btn:hover { background: #268bd1; border-color: #268bd1; }
+/* RED GRADIENT BUTTONS */
+.btn { display: inline-block; padding: 14px 20px; background: linear-gradient(135deg, #a30000 0%, #e60000 50%, #ff1a1a 100%); border: 1px solid #ff3333; color: #fff; text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.25); border-radius: 2px; text-align: center; }
+.btn:hover { background: linear-gradient(135deg, #b30000 0%, #ff0000 50%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.45); border-color: #ff6666; transform: translateY(-2px); }
 .btn.small { padding: 10px 14px; }
-.btn.yellow { background: #f6b24a; border-color: #f6b24a; color: #121a20; margin-top: 10px; }
-.btn.yellow:hover { background: #e09e3a; border-color: #e09e3a; }
-.outline { background: transparent; border-color: #fff; }
-.outline:hover { background: #fff; color: #081118; }
+
+/* Outline Button Variation */
+.outline { background: transparent; border: 2px solid #fff; box-shadow: none; }
+.outline:hover { background: #fff; color: #cc0000; box-shadow: 0 4px 15px rgba(255,255,255,0.3); border-color: #fff; }
 
 /* Text Links & Arrows */
 .text-link { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-top: 24px; transition: 0.2s; }
-.text-link.blue { color: #43a5df; }
+.text-link.blue { color: #ff3333; }
 .text-link:hover { opacity: 0.7; }
 .arrow { width: 14px; height: 14px; vertical-align: middle; stroke: currentColor; }
 
-/* Hero Section */
-.hero { min-height: 85vh; position: relative; display: flex; align-items: center; padding: 120px 6vw 70px; overflow: hidden; background: #081118; }
+/* Hero Section (Added Drop Shadow and Z-index) */
+.hero { min-height: 85vh; position: relative; display: flex; align-items: center; padding: 120px 6vw 70px; overflow: hidden; background: #081118; z-index: 5; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
 .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
 .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.6) 45%, transparent 100%); z-index: 1; }
 .copy { position: relative; z-index: 2; max-width: 720px; }
 .eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 700; }
-.blue { color: #43a5df; }
+.blue { color: #ff3333; }
 .hero h1 { font-size: clamp(36px, 5.5vw, 76px); line-height: 1.05; text-transform: uppercase; letter-spacing: -0.02em; font-weight: 300; margin: 18px 0 28px; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
 .hero h1 strong { font-weight: 700; }
 .hero p:not(.eyebrow) { font-size: clamp(16px, 2vw, 19px); max-width: 520px; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
