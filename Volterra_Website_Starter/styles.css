@@ -11,7 +11,7 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 72px; 
 .brand-logo { height: 60px; width: auto; display: block; margin-right: auto; }
 nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
 
-/* RED GRADIENT BUTTONS (Reduced dark stop to 60% so more light red shines through) */
+/* RED GRADIENT BUTTONS */
 .btn { display: inline-block; padding: 14px 24px; background: linear-gradient(135deg, #8a0000 0%, #b30000 60%, #ff1a1a 100%); border: 1px solid #8a0000; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
 .btn:hover { background: linear-gradient(135deg, #a30000 0%, #cc0000 60%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #a30000; transform: translateY(-2px); }
 .btn.small { padding: 11px 16px; font-size: 12px; }
@@ -26,7 +26,7 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .text-link:hover { opacity: 0.7; }
 .arrow { width: 14px; height: 14px; vertical-align: middle; stroke: currentColor; }
 
-/* Hero Section (With Drop Shadow and Z-index) */
+/* Hero Section */
 .hero { min-height: 85vh; position: relative; display: flex; align-items: center; padding: 120px 6vw 70px; overflow: hidden; background: #081118; z-index: 5; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
 .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
 .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.6) 45%, transparent 100%); z-index: 1; }
@@ -74,12 +74,10 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .light p { color: #4e5b64; }
 .light h2, .ag-section h2, .campus h2, .cta h2 { font-size: clamp(34px, 4vw, 56px); line-height: 1.02; margin: 10px 0 20px; }
 
-/* Industry Cards - VERTICAL TEXT STYLING */
+/* Industry Cards */
 .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .industry-grid article { min-height: 400px; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-transform: uppercase; position: relative; cursor: pointer; overflow: hidden; }
 .card-content { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; }
-
-/* Solid Fill Text */
 .industry-title { font-size: clamp(40px, 4vw, 56px); font-weight: 800; color: #ffffff; writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.1em; transition: 0.4s ease; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .industry-grid article:hover .industry-title { transform: rotate(180deg) scale(1.05); }
 
@@ -121,6 +119,41 @@ footer { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 28px; 
 .footer-logo { height: 60px; width: auto; display: block; margin-bottom: 20px; }
 footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: none; margin-top: 12px; }
 
+/* =========================================
+   NEW ABOUT PAGE STYLES
+========================================= */
+
+/* Hero */
+.about-hero { background: #121a20; min-height: 60vh; }
+
+/* Image Placeholders */
+.placeholder-img { background: #e0e5e9; border: 2px dashed #aeb8bf; display: flex; align-items: center; justify-content: center; color: #4e5b64; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; text-align: center; padding: 40px; }
+.dark-placeholder { background: #0c1820; border-color: #1a2730; color: #4e5b64; }
+
+/* Campus List Styling */
+.campus-list { list-style: none; padding: 0; margin: 30px 0 0; }
+.campus-list li { margin-bottom: 20px; padding-left: 24px; position: relative; color: #aeb8bf; font-size: 16px; line-height: 1.6; }
+.campus-list li strong { color: #fff; }
+.campus-list li::before { content: '→'; position: absolute; left: 0; color: #ff3333; font-weight: bold; }
+
+/* Partnership Section */
+.partnership-section { flex-direction: column; padding: 80px 5vw; border-top: 1px solid #1a2730; }
+.partnership-logo { height: 110px; margin-bottom: 30px; }
+.partnership-text { max-width: 800px; text-align: center; }
+.partnership-text h2 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 15px; }
+.partnership-text p { color: #aeb8bf; font-size: 18px; line-height: 1.6; margin: 0; }
+
+/* Core Values Grid */
+.values-section { padding: 100px 5vw; background: #081118; border-top: 1px solid #1a2730; }
+.values-header { text-align: center; margin-bottom: 60px; }
+.values-header h2 { font-size: clamp(34px, 4vw, 56px); margin: 10px 0 0; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; }
+.value-card { background: #0c161d; padding: 50px 40px; border-top: 3px solid #b30000; transition: 0.3s; }
+.value-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-color: #ff3333; }
+.value-card h3 { font-size: 24px; text-transform: uppercase; margin: 0 0 15px; color: #fff; }
+.value-card p { color: #97a5ae; margin: 0; line-height: 1.6; }
+
+
 /* Mobile Adjustments */
 .mobile-menu { display: none; color: #fff; cursor: pointer; }
 
@@ -147,7 +180,6 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; padding: 50px 5vw; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
   
-  /* FLIP TITLES TO HORIZONTAL ON MOBILE/TABLET */
   .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
   .industry-grid article:hover .industry-title { transform: scale(1.05); }
 
@@ -157,6 +189,9 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .footer-logo { height: 40px; }
   .panel, .field, .campus-art { min-height: 350px; }
   .field::before, .campus-art::before { background: linear-gradient(to bottom, #08131b 0%, transparent 30%); }
+
+  /* About Page Mobile Fixes */
+  .values-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 @media (max-width: 560px) {
