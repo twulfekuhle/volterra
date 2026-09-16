@@ -152,18 +152,18 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .team-card h3 { font-size: 22px; margin: 0 0 5px; color: #fff; text-transform: uppercase; }
 .team-title { color: #ff3333; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0; }
 
-
 /* =========================================
-   CONTACT PAGE STYLES
+   CONTACT PAGE STYLES (Light Theme)
 ========================================= */
 .contact-hero { background: #121a20; min-height: 45vh; }
-.contact-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; padding: 100px 5vw; background: #081118; max-width: 1400px; margin: 0 auto; }
-.contact-info h2 { font-size: clamp(28px, 3vw, 42px); margin: 0 0 15px; }
-.contact-info > p { color: #97a5ae; line-height: 1.6; margin-bottom: 40px; font-size: 16px; }
+.contact-section-wrapper { background: #f5f6f6; color: #121a20; }
+.contact-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; padding: 100px 5vw; max-width: 1400px; margin: 0 auto; }
+.contact-info h2 { font-size: clamp(28px, 3vw, 42px); margin: 0 0 15px; color: #081118; }
+.contact-info > p { color: #4e5b64; line-height: 1.6; margin-bottom: 40px; font-size: 16px; }
 .info-block { margin-bottom: 35px; }
-.contact-link, .contact-address { font-size: 18px; color: #fff; font-weight: 700; line-height: 1.5; display: inline-block; transition: 0.2s; }
+.contact-link, .contact-address { font-size: 18px; color: #121a20; font-weight: 700; line-height: 1.5; display: inline-block; transition: 0.2s; }
 .contact-link:hover { color: #ff3333; }
-.contact-form-container { background: #0c161d; border: 1px solid #1a2730; padding: 10px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.contact-form-container { background: #ffffff; border: 1px solid #d5dadd; padding: 10px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
 
 /* Mobile Adjustments */
