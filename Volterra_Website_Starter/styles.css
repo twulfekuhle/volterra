@@ -123,7 +123,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 /* =========================================
    ABOUT PAGE STYLES
 ========================================= */
-.about-hero { background: #121a20; min-height: 60vh; }
+.about-hero { background: #121a20; min-height: 60vh; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .placeholder-img { background: #e0e5e9; border: 2px dashed #aeb8bf; display: flex; align-items: center; justify-content: center; color: #4e5b64; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; text-align: center; padding: 40px; }
 .dark-placeholder { background: #0c1820; border-color: #1a2730; color: #4e5b64; }
 .campus-list { list-style: none; padding: 0; margin: 30px 0 0; }
@@ -159,7 +159,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 /* =========================================
    CONTACT PAGE STYLES (Light Theme)
 ========================================= */
-.contact-hero { background: #121a20; min-height: 45vh; }
+.contact-hero { background: #121a20; min-height: 45vh; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .contact-section-wrapper { background: #f5f6f6; color: #121a20; }
 .contact-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; padding: 100px 5vw; max-width: 1400px; margin: 0 auto; }
 .contact-info h2 { font-size: clamp(28px, 3vw, 42px); margin: 0 0 15px; color: #081118; }
