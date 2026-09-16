@@ -123,7 +123,6 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 /* =========================================
    ABOUT PAGE STYLES
 ========================================= */
-
 .about-hero { background: #121a20; min-height: 60vh; }
 .placeholder-img { background: #e0e5e9; border: 2px dashed #aeb8bf; display: flex; align-items: center; justify-content: center; color: #4e5b64; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; text-align: center; padding: 40px; }
 .dark-placeholder { background: #0c1820; border-color: #1a2730; color: #4e5b64; }
@@ -144,8 +143,6 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .value-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-color: #ff3333; }
 .value-card h3 { font-size: 24px; text-transform: uppercase; margin: 0 0 15px; color: #fff; }
 .value-card p { color: #97a5ae; margin: 0; line-height: 1.6; }
-
-/* Leadership Team */
 .leadership-section { padding: 100px 5vw; background: #0c1820; border-top: 1px solid #1a2730; }
 .leadership-header { text-align: center; margin-bottom: 60px; }
 .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
@@ -154,6 +151,19 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .team-card:hover .team-photo { border-color: #ff3333; }
 .team-card h3 { font-size: 22px; margin: 0 0 5px; color: #fff; text-transform: uppercase; }
 .team-title { color: #ff3333; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0; }
+
+
+/* =========================================
+   CONTACT PAGE STYLES
+========================================= */
+.contact-hero { background: #121a20; min-height: 45vh; }
+.contact-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; padding: 100px 5vw; background: #081118; max-width: 1400px; margin: 0 auto; }
+.contact-info h2 { font-size: clamp(28px, 3vw, 42px); margin: 0 0 15px; }
+.contact-info > p { color: #97a5ae; line-height: 1.6; margin-bottom: 40px; font-size: 16px; }
+.info-block { margin-bottom: 35px; }
+.contact-link, .contact-address { font-size: 18px; color: #fff; font-weight: 700; line-height: 1.5; display: inline-block; transition: 0.2s; }
+.contact-link:hover { color: #ff3333; }
+.contact-form-container { background: #0c161d; border: 1px solid #1a2730; padding: 10px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
 
 /* Mobile Adjustments */
@@ -169,6 +179,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   header { padding: 0 5vw; }
 
   .hero { min-height: 70vh; padding: 120px 5vw 60px; }
+  .contact-hero { min-height: 40vh; }
   .hero h1 { font-size: clamp(32px, 9vw, 50px); margin: 12px 0 20px; }
   
   .shade { background: linear-gradient(90deg, rgba(7,16,25,0.85) 0%, rgba(7,16,25,0.2) 100%); }
@@ -179,7 +190,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   
   .carousel-content h2 { font-size: 38px; }
 
-  .grid2, .ag-section, .campus, .split { grid-template-columns: 1fr; padding: 50px 5vw; }
+  .grid2, .ag-section, .campus, .split, .contact-section { grid-template-columns: 1fr; padding: 50px 5vw; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
   
   .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
@@ -192,9 +203,10 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .panel, .field, .campus-art { min-height: 350px; }
   .field::before, .campus-art::before { background: linear-gradient(to bottom, #08131b 0%, transparent 30%); }
 
-  /* About Page Mobile Fixes */
+  /* Subpage Mobile Fixes */
   .values-grid { grid-template-columns: 1fr; gap: 20px; }
   .team-card { flex: 0 1 calc(50% - 20px); }
+  .contact-section { gap: 40px; }
 }
 
 @media (max-width: 560px) {
@@ -204,7 +216,5 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .industry-grid, footer { grid-template-columns: 1fr; }
   .industry-grid article { min-height: 200px; }
   .industry-title { font-size: 32px; }
-  
-  /* Leadership Mobile Fix */
   .team-card { flex: 0 1 100%; }
 }
