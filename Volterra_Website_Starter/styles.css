@@ -8,18 +8,18 @@ body { margin: 0; font-family: 'Montserrat', Arial, sans-serif; background: #081
 a { color: inherit; text-decoration: none; }
 
 /* =========================================
-   HEADER & NAVIGATION
+   GLOBAL HEADER & NAVIGATION
 ========================================= */
 header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 72px; padding: 0 4vw; display: flex; align-items: center; gap: 28px; background: linear-gradient(#071018e8, #07101833); }
 .brand-logo { height: 60px; width: auto; display: block; margin-right: auto; }
 nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
 
-/* RED GRADIENT BUTTONS */
-.btn { display: inline-block; padding: 14px 24px; background: linear-gradient(135deg, #8a0000 0%, #b30000 60%, #ff1a1a 100%); border: 1px solid #8a0000; color: #fff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
+/* RED BUTTONS */
+.btn { display: inline-block; padding: 14px 26px; background: linear-gradient(135deg, #8a0000 0%, #b30000 60%, #ff1a1a 100%); border: 1px solid #8a0000; color: #fff; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: .1em; transition: 0.3s; cursor: pointer; box-shadow: 0 4px 15px rgba(230,0,0,0.3); border-radius: 2px; text-align: center; }
 .btn:hover { background: linear-gradient(135deg, #a30000 0%, #cc0000 60%, #ff4d4d 100%); box-shadow: 0 6px 20px rgba(255,0,0,0.5); border-color: #a30000; transform: translateY(-2px); }
-.btn.small { padding: 11px 16px; font-size: 12px; }
+.btn.small { padding: 11px 18px; font-size: 12px; }
 
-/* Outline Button Variation */
+/* Outline Button */
 .outline { background: transparent; border: 2px solid #fff; box-shadow: none; }
 .outline:hover { background: #fff; color: #cc0000; box-shadow: 0 4px 15px rgba(255,255,255,0.3); border-color: #fff; }
 
@@ -29,19 +29,23 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .text-link:hover { opacity: 0.7; }
 .arrow { width: 14px; height: 14px; vertical-align: middle; stroke: currentColor; }
 
+/* Typography Helpers */
+.eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 700; margin: 0 0 10px; }
+.blue { color: #ff3333; } 
+.light { background: #ffffff; color: #121a20; }
+.light p { color: #4e5b64; }
+
 /* =========================================
    HOMEPAGE: HERO SECTION
 ========================================= */
-.hero { min-height: 90vh; position: relative; display: flex; align-items: center; padding: 140px 6vw 90px; overflow: hidden; background: #081118; z-index: 5; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
+.hero { min-height: 92vh; position: relative; display: flex; align-items: center; padding: 140px 6vw 90px; overflow: hidden; background: #081118; z-index: 5; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
 .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
-.shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.6) 45%, transparent 100%); z-index: 1; }
-.copy { position: relative; z-index: 2; max-width: 720px; }
-.eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 700; }
-.blue { color: #ff3333; } 
-.hero h1 { font-size: clamp(38px, 5.5vw, 76px); line-height: 1.05; text-transform: uppercase; letter-spacing: -0.02em; font-weight: 300; margin: 18px 0 28px; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
-.hero h1 strong { font-weight: 700; }
-.hero p:not(.eyebrow) { font-size: clamp(16px, 2vw, 19px); max-width: 520px; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
-.actions { display: flex; gap: 14px; margin-top: 32px; }
+.shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,16,25,0.92) 0%, rgba(7,16,25,0.5) 45%, transparent 100%); z-index: 1; }
+.copy { position: relative; z-index: 2; max-width: 760px; }
+.hero h1 { font-size: clamp(38px, 5.2vw, 76px); line-height: 1.05; text-transform: uppercase; letter-spacing: -0.02em; font-weight: 300; margin: 18px 0 24px; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
+.hero h1 strong { font-weight: 800; }
+.hero p:not(.eyebrow) { font-size: clamp(16px, 1.8vw, 19px); max-width: 560px; text-shadow: 0 2px 10px rgba(0,0,0,0.6); margin: 0 0 32px; color: #d5dadd; }
+.actions { display: flex; gap: 14px; }
 .scroll-arrow { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: #fff; opacity: 0.6; z-index: 2; }
 
 /* =========================================
@@ -70,80 +74,137 @@ nav { display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; marg
 .carousel-content { max-width: 820px; margin: 0 auto; text-align: left; padding: 0 5vw; position: relative; z-index: 2; width: 100%; }
 .carousel-content .series { text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; margin-bottom: 8px; color: #666; font-weight: 700; }
 .carousel-content h2 { font-size: clamp(38px, 4vw, 52px); margin: 0 0 16px; color: #081118; font-weight: 800; line-height: 1; }
-.carousel-content p { font-size: 17px; color: #444; margin-bottom: 32px; line-height: 1.6; }
+.carousel-content p { font-size: 16px; color: #444; margin-bottom: 32px; line-height: 1.6; }
+.carousel-content p strong { color: #081118; font-weight: 800; }
 
 /* Authorized Dealer Banner */
 .auth-dealer { background: #0c161d; padding: 45px 5vw; display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #1a2730; }
 .auth-dealer img { height: 95px; width: auto; object-fit: contain; }
 
 /* =========================================
-   HOMEPAGE: CREWED & UNMANNED SPLIT PANELS
+   HOMEPAGE: SECTION 3 - REAL INDUSTRIES (LIGHT 2-COLUMN)
+========================================= */
+.industries-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 5vw;
+  align-items: center;
+  padding: 100px 5vw;
+  background: #ffffff;
+}
+.industries-copy h2 { font-size: clamp(36px, 4vw, 56px); line-height: 1.05; margin: 10px 0 20px; color: #081118; font-weight: 800; }
+.industries-copy p:not(.eyebrow) { font-size: 17px; line-height: 1.6; color: #4e5b64; margin: 0; }
+
+.industries-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  width: 100%;
+}
+.ind-card {
+  min-height: 520px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.ind-card .card-content { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.ind-card .industry-title {
+  font-size: clamp(32px, 3.2vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+.ind-card:hover .industry-title { transform: rotate(180deg) scale(1.05); }
+
+.ind-card.ag { background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 80%), url('industry-ag.jpg') center/cover no-repeat; }
+.ind-card.energy { background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 80%), url('industry-energy.png') center/cover no-repeat; }
+.ind-card.infra { background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 80%), url('infrastructure-picture.png') center/cover no-repeat; }
+.ind-card.emerging { background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 80%), url('emerging-picture.png') center/cover no-repeat; }
+
+/* =========================================
+   HOMEPAGE: SECTION 4 - CREWED & UNMANNED SPLIT (DARK)
 ========================================= */
 .split { display: grid; grid-template-columns: 1fr 1fr; }
-.panel { min-height: 600px; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 80px 6vw; position: relative; }
+.panel { min-height: 560px; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 80px 6vw; position: relative; }
 .panel-content { position: relative; z-index: 2; }
-.panel h2 { font-size: clamp(30px, 3.2vw, 42px); text-shadow: 0 2px 10px rgba(0,0,0,0.6); margin: 10px 0 0; }
-.crewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.95) 0%, transparent 65%), url('crewed-r44.png'); background-size: cover; background-position: center; }
-.uncrewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.95) 0%, transparent 65%), url('unmanned-aviation.webp'); background-size: cover; background-position: center; }
+.panel h2 { font-size: clamp(28px, 3.2vw, 42px); line-height: 1.1; text-shadow: 0 2px 10px rgba(0,0,0,0.6); margin: 10px 0 0; }
+.crewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.95) 0%, transparent 65%), url('crewed-r44.png') center/cover no-repeat; }
+.uncrewed { background: linear-gradient(to right, rgba(7,16,25,0.95) 0%, rgba(7,16,25,0.2) 100%), linear-gradient(to top, rgba(7,16,25,0.95) 0%, transparent 65%), url('unmanned-aviation.webp') center/cover no-repeat; }
 
 /* =========================================
-   HOMEPAGE: INDUSTRY VERTICAL CARDS
-========================================= */
-.industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.industry-grid article { min-height: 520px; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-transform: uppercase; position: relative; cursor: pointer; overflow: hidden; }
-.card-content { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; }
-
-.industry-title { font-size: clamp(38px, 3.6vw, 54px); font-weight: 800; color: #ffffff; writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.12em; transition: 0.4s ease; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-.industry-grid article:hover .industry-title { transform: rotate(180deg) scale(1.05); }
-
-.ag { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-ag.jpg'); background-size: cover; background-position: center; }
-.energy { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('industry-energy.png'); background-size: cover; background-position: center; }
-.infra { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('infrastructure-picture.png'); background-size: cover; background-position: center; }
-.emerging { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 80%), url('emerging-picture.png'); background-size: cover; background-position: center; }
-
-/* =========================================
-   HOMEPAGE: BORN FROM AGRICULTURE
+   HOMEPAGE: SECTION 5 - BORN FROM AGRICULTURE (DARK)
 ========================================= */
 .ag-section { display: grid; grid-template-columns: 1fr 1.3fr; background: #08131b; min-height: 540px; }
-.ag-section > div:first-child { padding: 90px 6vw; display: flex; flex-direction: column; justify-content: center; }
-.ag-section h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; margin: 14px 0 22px; }
-.ag-section p:not(.eyebrow) { color: #97a5ae; font-size: 17px; line-height: 1.6; max-width: 520px; }
+.ag-copy { padding: 90px 6vw; display: flex; flex-direction: column; justify-content: center; }
+.ag-copy h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1.05; margin: 14px 0 22px; font-weight: 800; }
+.ag-copy p:not(.eyebrow) { color: #97a5ae; font-size: 16px; line-height: 1.6; max-width: 500px; margin: 0; }
 .field { min-height: 540px; position: relative; background: url('born-ag-bg.jpg') center/cover no-repeat; }
 .field::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #08131b 0%, transparent 25%); }
 
 /* =========================================
-   HOMEPAGE: LANDSCAPES (MISSION READY)
+   HOMEPAGE: SECTION 6 - MISSION-READY (LIGHT 2-COLUMN)
 ========================================= */
-.landscapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.landscapes div { min-height: 340px; background-size: cover; background-position: center; }
+.mission-ready-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 5vw;
+  align-items: center;
+  padding: 100px 5vw;
+  background: #ffffff;
+}
+.mission-copy h2 { font-size: clamp(34px, 3.8vw, 52px); line-height: 1.05; margin: 10px 0 20px; color: #081118; font-weight: 800; }
+.mission-copy p:not(.eyebrow) { font-size: 16px; line-height: 1.6; color: #4e5b64; margin: 0; }
+
+.mission-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 100%;
+}
+.mission-gallery div {
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+}
 .landscape-1 { background-image: url('mission-ready-1.png'); }
 .landscape-2 { background-image: url('mission-ready-2.png'); }
 .landscape-3 { background-image: url('mission-ready-3.png'); }
 
 /* =========================================
-   HOMEPAGE: CAMPUS SECTION
+   HOMEPAGE: SECTION 7 - CAMPUS (DARK)
 ========================================= */
 .campus { display: grid; grid-template-columns: 0.9fr 1.6fr; min-height: 520px; background: #0c1820; }
-.campus > div:first-child { padding: 90px 6vw; display: flex; flex-direction: column; justify-content: center; }
-.campus h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; margin: 14px 0 20px; }
-.campus p:not(.eyebrow) { color: #97a5ae; font-size: 17px; line-height: 1.6; max-width: 480px; }
+.campus-copy { padding: 90px 6vw; display: flex; flex-direction: column; justify-content: center; }
+.campus-copy h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1.05; margin: 14px 0 20px; font-weight: 800; }
+.campus-copy p:not(.eyebrow) { color: #97a5ae; font-size: 17px; line-height: 1.6; max-width: 480px; margin: 0; }
 .campus-art { background: linear-gradient(to right, #0c1820 0%, rgba(12,24,32,0.15) 45%), url('campus-pic.png') center/cover no-repeat; min-height: 520px; position: relative; }
 
 /* =========================================
-   HOMEPAGE: CTA & GLOBAL FOOTER
+   HOMEPAGE: SECTION 8 - CTA BANNER
 ========================================= */
 .cta { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: 90px 6vw; background: linear-gradient(100deg, rgba(16,28,36,0.92), rgba(74,55,38,0.85)), url('move-aviation-forward.webp') center/cover no-repeat; }
-.cta h2 { font-size: clamp(34px, 4vw, 52px); margin: 0 0 14px; }
-.cta p { max-width: 740px; color: #d5dadd; font-size: 18px; line-height: 1.6; margin: 0; }
+.cta h2 { font-size: clamp(34px, 4vw, 52px); margin: 0 0 14px; font-weight: 800; }
+.cta p { max-width: 740px; color: #d5dadd; font-size: 17px; line-height: 1.6; margin: 0; }
+
+/* =========================================
+   GLOBAL FOOTER
+========================================= */
 footer { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; padding: 75px 6vw; background: #071016; font-size: 12px; text-transform: uppercase; }
 .footer-logo { height: 60px; width: auto; display: block; margin-bottom: 20px; }
 footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: none; margin-top: 12px; }
 
-/* Common Light Layout */
+/* Common 2-Column Light Subpage Grid */
 .grid2 { display: grid; grid-template-columns: 1fr 2fr; gap: 52px; padding: 80px 6vw; }
-.light { background: #f5f6f6; color: #121a20; }
-.light p { color: #4e5b64; }
-.light h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; margin: 10px 0 20px; color: #081118; }
+.grid2 h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.05; margin: 10px 0 20px; color: #081118; font-weight: 800; }
 
 /* =========================================
    ABOUT PAGE STYLES
@@ -153,10 +214,10 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
 .about-feature-img-wrapper { width: 100%; height: 420px; max-height: 420px; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); border: 1px solid #d5dadd; }
 .about-feature-img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
 
-/* Leadership Team (Light Theme) */
+/* Leadership Team (Light) */
 .leadership-section { padding: 100px 5vw; background: #f5f6f6; border-top: 1px solid #d5dadd; }
 .leadership-header { text-align: center; margin-bottom: 60px; }
-.leadership-header h2 { color: #081118; }
+.leadership-header h2 { color: #081118; font-size: clamp(34px, 4vw, 52px); margin: 10px 0 0; }
 .leadership-header p:not(.eyebrow) { color: #4e5b64; font-size: 18px; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; max-width: 960px; margin: 0 auto; }
 .team-card { text-align: center; }
@@ -173,7 +234,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
 .partnership-text h2 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 15px; }
 .partnership-text p { color: #aeb8bf; font-size: 18px; line-height: 1.6; margin: 0; }
 
-/* Core Values */
+/* Values */
 .values-section { padding: 100px 5vw; background: #081118; border-top: 1px solid #1a2730; }
 .values-header { text-align: center; margin-bottom: 60px; }
 .values-header h2 { font-size: clamp(34px, 4vw, 56px); margin: 10px 0 0; }
@@ -226,7 +287,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
 .course-card .btn { align-self: flex-start; }
 
 /* =========================================
-   MOBILE & RESPONSIVE ADJUSTMENTS
+   MOBILE & RESPONSIVE RULES
 ========================================= */
 .mobile-menu { display: none; color: #fff; cursor: pointer; }
 
@@ -248,19 +309,28 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
   .slider-btn.next { right: 1vw; }
   .carousel-content h2 { font-size: 38px; }
 
-  .grid2, .ag-section, .campus, .split, .contact-section { grid-template-columns: 1fr; padding: 50px 5vw; }
-  .industry-grid { grid-template-columns: 1fr 1fr; }
-  .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
-  .industry-grid article:hover .industry-title { transform: scale(1.05); }
+  /* Split to 1 Column on Tablet/Mobile */
+  .industries-section, .mission-ready-section, .split, .ag-section, .campus, .grid2, .contact-section { 
+    grid-template-columns: 1fr; 
+    padding: 60px 5vw; 
+    gap: 40px;
+  }
+  .industries-gallery { grid-template-columns: 1fr 1fr; }
+  .ind-card { min-height: 340px; }
+  .ind-card .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
+  .ind-card:hover .industry-title { transform: scale(1.05); }
 
-  .landscapes { grid-template-columns: 1fr; }
+  .mission-gallery { grid-template-columns: 1fr; }
+  .mission-gallery div { min-height: 240px; }
+
   .cta { flex-direction: column; align-items: flex-start; }
   footer { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 5vw; }
   .footer-logo { height: 40px; }
-  .panel, .field, .campus-art { min-height: 350px; }
+
+  .panel, .field, .campus-art { min-height: 380px; }
   .field::before, .campus-art::before { background: linear-gradient(to bottom, #08131b 0%, transparent 30%); }
 
-  /* Subpage Mobile Fixes */
+  /* Subpages */
   .about-origin-grid { grid-template-columns: 1fr; gap: 35px; }
   .about-feature-img-wrapper { height: 280px; max-height: 280px; }
   .about-campus { grid-template-columns: 1fr; }
@@ -268,7 +338,6 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
   .campus-content-block { padding: 40px 5vw; }
   .values-grid { grid-template-columns: 1fr; gap: 20px; }
   .team-grid { grid-template-columns: 1fr; max-width: 320px; gap: 40px; }
-  .contact-section { gap: 40px; }
   .courses-grid { grid-template-columns: 1fr; }
 }
 
@@ -276,10 +345,8 @@ footer span { display: block; color: #97a5ae; line-height: 1.8; text-transform: 
   :root { --slide-width: 90%; --center-offset: 5%; }
   .actions { flex-direction: column; align-items: stretch; }
   .actions .btn { text-align: center; }
-  .industry-grid, footer { grid-template-columns: 1fr; }
-  .industry-grid article { min-height: 220px; }
-  .industry-title { font-size: 30px; }
-  .about-feature-img-wrapper { height: 220px; max-height: 220px; }
-  .campus-photo-wrapper { height: 250px; max-height: 250px; }
-  .team-grid { max-width: 270px; }
+  .industries-gallery { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
+  .ind-card { min-height: 200px; }
+  .ind-card .industry-title { font-size: 30px; }
 }
