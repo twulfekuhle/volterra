@@ -5,236 +5,236 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Volterra | Advanced Aviation Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=36">
 </head>
 <body>
   <header>
-    <a href="#" class="brand-link">
+    <a href="index.html" class="brand-link">
       <img src="volterra-horizontal-logo-whitetext.png" alt="Volterra Logo" class="brand-logo">
     </a>
     <nav>
       <a href="#aircraft">Aircraft</a>
-      <a href="#solutions">Solutions</a>
+      <a href="training.html">Training</a>
       <a href="#industries">Industries</a>
-      <a href="#service">Service & Support</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn small" href="#contact">Contact Our Team</a>
+    <a class="btn small" href="contact.html">Contact Our Team</a>
     <div class="mobile-menu">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
-    <video autoplay loop muted playsinline class="hero-video">
+    <video class="hero-video" autoplay loop muted playsinline poster="hero-bg.png">
       <source src="hero-video.mp4" type="video/mp4">
     </video>
     <div class="shade"></div>
     <div class="copy">
-      <h1><strong>ADVANCING<br>AVIATION.</strong><br>EXPANDING<br>WHAT’S POSSIBLE.</h1>
-      <p>Volterra delivers piloted and unmanned aviation solutions for demanding commercial applications.</p>
+      <p class="eyebrow blue">Advanced Aviation Solutions</p>
+      <h1><strong>ELEVATING</strong><br>CAPABILITIES.</h1>
+      <p>Bridging traditional piloted aircraft and uncrewed autonomous systems for commercial operations.</p>
       <div class="actions">
-        <a class="btn" href="#about">Explore Volterra</a>
-        <a class="btn outline" href="#contact">Contact Our Team</a>
+        <a class="btn" href="contact.html">Contact Our Team</a>
+        <a class="btn outline" href="about.html">Learn More</a>
       </div>
-    </div>
-    <div class="scroll-arrow">
-      <svg width="28" height="16" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l10 10L22 2"/></svg>
     </div>
   </section>
 
-  <!-- ROBINSON-STYLE SLIDER -->
-  <section class="heli-slider" id="solutions">
-    <div class="bg-title" id="bg-title">R66</div>
-
+  <!-- ROBINSON SLIDER (AIRCRAFT SECTION) -->
+  <section id="aircraft" class="heli-slider">
+    <div class="bg-title">ROBINSON</div>
+    
     <div class="carousel-container">
-      <button class="slider-btn prev" onclick="moveSlide(-1)">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button class="slider-btn next" onclick="moveSlide(1)">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      <button class="slider-btn prev" id="prevBtn" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
       </button>
 
-      <div class="carousel-track-wrapper" id="swipe-area">
-        <div class="carousel-track" id="track">
-          <div class="slide" onclick="setSlide(0)"><img src="heli-r66.png" alt="R66"></div>
-          <div class="slide" onclick="setSlide(1)"><img src="heli-sprayhawk.png" alt="Sprayhawk"></div>
-          <div class="slide" onclick="setSlide(2)"><img src="heli-r44.png" alt="R44"></div>
-          <div class="slide" onclick="setSlide(3)"><img src="heli-r88.webp" alt="R88"></div>
-          <div class="slide" onclick="setSlide(4)"><img src="heli-r22.png" alt="R22"></div>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="sliderTrack">
+          <div class="slide" data-index="0">
+            <img src="heli-r22.png" alt="Robinson R22">
+          </div>
+          <div class="slide active" data-index="1">
+            <img src="heli-r44.png" alt="Robinson R44">
+          </div>
+          <div class="slide" data-index="2">
+            <img src="heli-r66.png" alt="Robinson R66">
+          </div>
+          <div class="slide" data-index="3">
+            <img src="heli-sprayhawk.png" alt="Robinson Sprayhawk">
+          </div>
         </div>
       </div>
+
+      <button class="slider-btn next" id="nextBtn" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
 
-    <div class="carousel-dots" id="dots">
-      <span class="dot" onclick="setSlide(0)"></span>
-      <span class="dot" onclick="setSlide(1)"></span>
-      <span class="dot" onclick="setSlide(2)"></span>
-      <span class="dot" onclick="setSlide(3)"></span>
-      <span class="dot" onclick="setSlide(4)"></span>
+    <div class="carousel-dots" id="sliderDots">
+      <div class="dot" data-index="0"></div>
+      <div class="dot active" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+      <div class="dot" data-index="3"></div>
     </div>
 
     <div class="carousel-content">
-      <p class="series" id="c-series">R66 Series</p>
-      <h2 id="c-title">R66 Turbine</h2>
-      <p id="c-desc"><strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine.</p>
-      <a href="#contact" class="btn">Learn More</a>
+      <div class="series" id="heliSeries">Robinson Series</div>
+      <h2 id="heliTitle">R44 RAVEN II</h2>
+      <p id="heliDesc">The world's top-selling general aviation helicopter, recognized for reliability, responsive handling, and low operating costs.</p>
+      <a href="contact.html" class="btn small">Inquire About Aircraft</a>
     </div>
   </section>
 
   <!-- AUTHORIZED DEALER BANNER -->
-  <section class="auth-dealer">
+  <div class="auth-dealer">
     <img src="robinson-authorized-dealer.png" alt="Robinson Authorized Dealer">
-  </section>
+  </div>
 
-  <section class="light grid2" id="industries">
-    <div>
-      <p class="eyebrow blue">Aviation for the real world</p>
-      <h2>Real industries.<br>Real impact.</h2>
-      <p>From agriculture and energy to infrastructure and emerging commercial applications, Volterra helps organizations put advanced aviation technology to work.</p>
-      <a href="#" class="text-link blue">Explore Industries <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="2"/></svg></a>
-    </div>
-    <div class="industry-grid">
-      <article class="ag">
-        <div class="card-content">
-          <span class="industry-title">Agriculture</span>
-        </div>
-      </article>
-      <article class="energy">
-        <div class="card-content">
-          <span class="industry-title">Energy</span>
-        </div>
-      </article>
-      <article class="infra">
-        <div class="card-content">
-          <span class="industry-title">Infrastructure</span>
-        </div>
-      </article>
-      <article class="emerging">
-        <div class="card-content">
-          <span class="industry-title">Emerging</span>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="split" id="aircraft">
+  <!-- CREWED & UNCREWED SOLUTIONS -->
+  <section id="solutions" class="split">
     <div class="panel crewed">
       <div class="panel-content">
         <p class="eyebrow blue">Piloted Aviation</p>
-        <h2>Proven aircraft.<br>Professional support.</h2>
-        <a href="#" class="text-link">Learn More <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="2"/></svg></a>
+        <h2>Crewed Solutions</h2>
+        <a href="contact.html" class="text-link blue">Explore Piloted <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
       </div>
     </div>
     <div class="panel uncrewed">
       <div class="panel-content">
-        <p class="eyebrow blue">Unmanned Aviation</p>
-        <h2>New capabilities.<br>New missions.</h2>
-        <a href="#" class="text-link">Learn More <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="2"/></svg></a>
+        <p class="eyebrow blue">Autonomous Systems</p>
+        <h2>Unmanned Solutions</h2>
+        <a href="contact.html" class="text-link blue">Explore UAVs <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
       </div>
     </div>
   </section>
 
+  <!-- INDUSTRIES -->
+  <section id="industries" class="industry-grid">
+    <article class="ag">
+      <div class="card-content">
+        <p class="industry-title">Agriculture</p>
+      </div>
+    </article>
+    <article class="energy">
+      <div class="card-content">
+        <p class="industry-title">Energy</p>
+      </div>
+    </article>
+    <article class="infra">
+      <div class="card-content">
+        <p class="industry-title">Infrastructure</p>
+      </div>
+    </article>
+    <article class="emerging">
+      <div class="card-content">
+        <p class="industry-title">Commercial</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- AG ROOTS SECTION -->
   <section class="ag-section">
     <div>
-      <p class="eyebrow blue">Deep roots. New technology.</p>
-      <h2>Born from agriculture.<br>Built for more.</h2>
-      <p>Decades of agricultural experience give Volterra a unique perspective on real-world challenges. We combine that knowledge with advanced aviation technology to deliver practical solutions today and into the future.</p>
+      <p class="eyebrow blue">Born from Agriculture</p>
+      <h2>Rooted in precision and practical execution.</h2>
+      <p>Applying modern aviation technology directly to demanding real-world agricultural and environmental operations.</p>
     </div>
     <div class="field"></div>
   </section>
 
-  <section class="light grid2">
-    <div>
-      <p class="eyebrow blue">One platform. A world of possibilities.</p>
-      <h2>Mission-ready aviation for demanding environments.</h2>
-      <p>Our aircraft, expertise and support help customers solve complex problems across industries and geographies.</p>
-    </div>
-    <div class="landscapes">
-      <div class="landscape-1"></div>
-      <div class="landscape-2"></div>
-      <div class="landscape-3"></div>
-    </div>
+  <!-- LANDSCAPE / MISSION READY -->
+  <section class="landscapes">
+    <div class="landscape-1"></div>
+    <div class="landscape-2"></div>
+    <div class="landscape-3"></div>
   </section>
 
-  <section class="campus" id="about">
+  <!-- CAMPUS -->
+  <section class="campus">
     <div>
-      <p class="eyebrow blue">A new vision for aviation</p>
-      <h2>The Volterra Campus</h2>
-      <p>A purpose-built hub for aviation innovation, training, service and collaboration.</p>
+      <p class="eyebrow blue">The Hub</p>
+      <h2>Iowa City Campus</h2>
+      <p>Centralized maintenance, flight operations, and pilot instruction facility.</p>
     </div>
     <div class="campus-art"></div>
   </section>
 
-  <section class="cta" id="contact">
+  <!-- CTA -->
+  <section class="cta">
     <div>
-      <h2>Let’s move aviation forward.</h2>
-      <p>Whether you’re exploring aircraft, new technology, commercial applications or strategic collaboration, we’d like to hear from you.</p>
+      <h2>Ready to launch your mission?</h2>
+      <p>Connect with our experts to discuss aircraft sales, commercial applications, or specialized training.</p>
     </div>
-    <a class="btn" href="mailto:info@volterraus.com">Start a Conversation</a>
+    <a class="btn" href="contact.html">Contact Our Team</a>
   </section>
 
+  <!-- FOOTER -->
   <footer id="service">
     <div><img src="volterra-horizontal-logo-whitetext.png" alt="Volterra Logo" class="footer-logo"></div>
-    <div>Aircraft<br><span>Piloted Aircraft<br>Unmanned Systems</span></div>
-    <div>Solutions<br><span>Commercial Solutions<br>Training</span></div>
-    <div>Company<br><span>About Volterra<br>Industries</span></div>
-    <div>Contact<br><span>info@volterraus.com<br>2144 Old Hwy 218 S<br>Iowa City, IA 52246</span></div>
+    <div>Aircraft<br><span><a href="#aircraft">Piloted Aircraft</a><br><a href="#aircraft">Unmanned Systems</a></span></div>
+    <div>Training<br><span><a href="training.html">Flight Academy</a><br><a href="training.html">Upcoming Courses</a></span></div>
+    <div>Company<br><span><a href="about.html">About Volterra</a><br><a href="#industries">Industries</a></span></div>
+    <div>Contact<br><span><a href="mailto:info@volterraus.com">info@volterraus.com</a><br>2144 Old Hwy 218 S<br>Iowa City, IA 52246</span></div>
   </footer>
 
+  <!-- ROBINSON SLIDER SCRIPT -->
   <script>
-    const slideData = [
-      { bg: "R66", series: "R66 Series", title: "R66 Turbine", desc: "<strong>THE POWER TO PERFORM.</strong> The R66 Turbine incorporates many of the design features of its reputable predecessor, the R44, including a two-bladed rotor system, T-bar cyclic, and an open interior cabin configuration. Powered by a Rolls Royce RR300 turbine engine." },
-      { bg: "UAV", series: "Unmanned Series", title: "R44 Sprayhawk", desc: "<strong>ADVANCED AGRICULTURAL AVIATION.</strong> The unmanned R44 Sprayhawk combines Robinson's proven helicopter platform with cutting-edge autonomous technology for high-efficiency, precision aerial application." },
-      { bg: "R44", series: "R44 Series", title: "R44 Raven II", desc: "<strong>THE WORLD'S BEST-SELLING GENERAL AVIATION HELICOPTER.</strong> The four-seat R44 Raven II delivers the performance of an expensive turbine helicopter at an affordable piston price. Its sleek design, impressive speed, and unparalleled reliability make it a favorite." },
-      { bg: "R88", series: "R88 Series", title: "R88", desc: "<strong>INTRODUCING OUR LARGEST, MOST CAPABLE WORKHORSE.</strong> The all-new R88 will have all the hallmarks of the Robinson brand: simplicity, dependability, and exceptional safety. It will carry more passengers, more cargo, and more specialized equipment than ever before. Powered by a Safran Arriel 2W engine, the R88 will also feature a full Garmin avionics suite." },
-      { bg: "R22", series: "R22 Series", title: "R22 Beta II", desc: "<strong>THE INDUSTRY STANDARD FOR TRAINING.</strong> The two-seat R22 Beta II is a proven workhorse that delivers exceptional performance in a variety of applications. It has a two-bladed rotor system and is powered by a proven Lycoming O-360 engine." }
+    const helis = [
+      { series: "Robinson R22", title: "R22 BETA II", desc: "A two-seat helicopter renowned for operating economy and exceptional performance as the global benchmark training aircraft." },
+      { series: "Robinson R44", title: "R44 RAVEN II", desc: "The world's top-selling general aviation helicopter, recognized for reliability, responsive handling, and low operating costs." },
+      { series: "Robinson R66", title: "R66 TURBINE", desc: "Turbine-powered performance with a spacious 5-seat cabin, large baggage compartment, and Rolls-Royce RR300 engine." },
+      { series: "Agricultural Specialist", title: "R44 SPRAYHAWK", desc: "Equipped with specialized spray gear designed specifically for agricultural crop applications and high-efficiency aerial work." }
     ];
 
-    let currentIndex = 0;
-    const track = document.getElementById('track');
+    let current = 1;
+    const track = document.getElementById('sliderTrack');
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
-    const bgTitle = document.getElementById('bg-title');
-    const cSeries = document.getElementById('c-series');
-    const cTitle = document.getElementById('c-title');
-    const cDesc = document.getElementById('c-desc');
+    const title = document.getElementById('heliTitle');
+    const series = document.getElementById('heliSeries');
+    const desc = document.getElementById('heliDesc');
 
-    function setSlide(index) {
-      if(index < 0) index = slides.length - 1;
-      if(index >= slides.length) index = 0;
-      currentIndex = index;
+    function updateSlider(index) {
+      current = index;
+      const slideWidth = 40;
+      const centerOffset = 30;
+      const shift = centerOffset - (current * slideWidth);
+      track.style.transform = `translateX(${shift}%)`;
 
-      track.style.transform = `translateX(calc(var(--center-offset) - (var(--slide-width) * ${currentIndex})))`;
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
 
-      slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
-      dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
-
-      const data = slideData[currentIndex];
-      bgTitle.textContent = data.bg;
-      cSeries.textContent = data.series;
-      cTitle.textContent = data.title;
-      cDesc.innerHTML = data.desc;
+      series.textContent = helis[current].series;
+      title.textContent = helis[current].title;
+      desc.textContent = helis[current].desc;
     }
 
-    function moveSlide(dir) { setSlide(currentIndex + dir); }
-    setSlide(0);
-
-    // Touch Swipe Logic for Mobile
-    let touchstartX = 0;
-    let touchendX = 0;
-    const swipeArea = document.getElementById('swipe-area');
-
-    swipeArea.addEventListener('touchstart', e => {
-      touchstartX = e.changedTouches[0].screenX;
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      let idx = current > 0 ? current - 1 : helis.length - 1;
+      updateSlider(idx);
     });
 
-    swipeArea.addEventListener('touchend', e => {
-      touchendX = e.changedTouches[0].screenX;
-      if (touchendX < touchstartX - 40) moveSlide(1);  
-      if (touchendX > touchstartX + 40) moveSlide(-1); 
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      let idx = current < helis.length - 1 ? current + 1 : 0;
+      updateSlider(idx);
     });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        updateSlider(parseInt(e.target.dataset.index));
+      });
+    });
+
+    slides.forEach(slide => {
+      slide.addEventListener('click', () => {
+        updateSlider(parseInt(slide.dataset.index));
+      });
+    });
+
+    updateSlider(1);
   </script>
 </body>
 </html>
