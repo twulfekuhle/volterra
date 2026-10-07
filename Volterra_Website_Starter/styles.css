@@ -120,9 +120,7 @@ footer { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 28px; 
 .footer-logo { height: 60px; width: auto; display: block; margin-bottom: 20px; }
 footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: none; margin-top: 12px; }
 
-/* =========================================
-   ABOUT PAGE STYLES
-========================================= */
+/* ABOUT PAGE STYLES */
 .about-hero { background: #121a20; min-height: 60vh; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .placeholder-img { background: #e0e5e9; border: 2px dashed #aeb8bf; display: flex; align-items: center; justify-content: center; color: #4e5b64; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; text-align: center; padding: 40px; }
 .dark-placeholder { background: #0c1820; border-color: #1a2730; color: #4e5b64; }
@@ -156,9 +154,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .team-card h3 { font-size: 22px; margin: 0 0 5px; color: #081118; text-transform: uppercase; }
 .team-title { color: #ff3333; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0; }
 
-/* =========================================
-   CONTACT PAGE STYLES (Light Theme)
-========================================= */
+/* CONTACT PAGE STYLES (Light Theme) */
 .contact-hero { background: #121a20; min-height: 45vh; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .contact-section-wrapper { background: #f5f6f6; color: #121a20; }
 .contact-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; padding: 100px 5vw; max-width: 1400px; margin: 0 auto; }
@@ -169,17 +165,14 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .contact-link:hover { color: #ff3333; }
 .contact-form-container { background: #ffffff; border: 1px solid #d5dadd; padding: 10px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
-
-/* =========================================
-   TRAINING PAGE STYLES
-========================================= */
+/* TRAINING PAGE STYLES */
 .training-hero { background: #121a20; min-height: 60vh; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .courses-section { padding: 100px 5vw; background: #0c1820; border-top: 1px solid #1a2730; }
 .courses-header { text-align: center; margin-bottom: 60px; }
 .courses-header h2 { font-size: clamp(34px, 4vw, 56px); margin: 10px 0 0; }
 .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto; }
 .course-card { background: #081118; padding: 40px; border-top: 3px solid #b30000; border-radius: 2px; display: flex; flex-direction: column; transition: 0.3s; border-left: 1px solid #1a2730; border-right: 1px solid #1a2730; border-bottom: 1px solid #1a2730; }
-.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-top-color: #ff3333; }
+.course-card:hover { transform: translateY(-50px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-top-color: #ff3333; }
 .course-date { display: inline-block; align-self: flex-start; background: #ff3333; color: #fff; padding: 6px 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 25px; border-radius: 2px; }
 .course-card h3 { font-size: 24px; margin: 0 0 5px; color: #fff; }
 .course-type { color: #ff3333; font-size: 12px; font-weight: 700; text-transform: uppercase; margin: 0 0 20px; letter-spacing: 0.05em; }
@@ -189,46 +182,34 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .course-details li strong { color: #fff; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; margin-right: 5px; }
 .course-card .btn { align-self: flex-start; }
 
-
 /* Mobile Adjustments */
 .mobile-menu { display: none; color: #fff; cursor: pointer; }
 
 @media (max-width: 900px) {
   :root { --slide-width: 75%; --center-offset: 12.5%; }
-  
   nav, .btn.small { display: none; }
   .mobile-menu { display: block; margin-left: auto; }
-  
   .brand-logo { height: 48px; } 
   header { padding: 0 5vw; }
-
   .hero { min-height: 70vh; padding: 120px 5vw 60px; }
   .contact-hero { min-height: 40vh; }
   .training-hero { min-height: 50vh; }
   .hero h1 { font-size: clamp(32px, 9vw, 50px); margin: 12px 0 20px; }
-  
   .shade { background: linear-gradient(90deg, rgba(7,16,25,0.85) 0%, rgba(7,16,25,0.2) 100%); }
-  
   .slider-btn { width: 36px; height: 36px; }
   .slider-btn.prev { left: 1vw; }
   .slider-btn.next { right: 1vw; }
-  
   .carousel-content h2 { font-size: 38px; }
-
   .grid2, .ag-section, .campus, .split, .contact-section { grid-template-columns: 1fr; padding: 50px 5vw; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
-  
   .industry-title { writing-mode: horizontal-tb; transform: none; text-align: center; }
   .industry-grid article:hover .industry-title { transform: scale(1.05); }
-
   .landscapes { grid-template-columns: 1fr; }
   .cta { flex-direction: column; align-items: flex-start; }
   footer { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 5vw; }
   .footer-logo { height: 40px; }
   .panel, .field, .campus-art { min-height: 350px; }
   .field::before, .campus-art::before { background: linear-gradient(to bottom, #08131b 0%, transparent 30%); }
-
-  /* Subpage Mobile Fixes */
   .values-grid { grid-template-columns: 1fr; gap: 20px; }
   .team-card { flex: 0 1 calc(50% - 20px); }
   .contact-section { gap: 40px; }
