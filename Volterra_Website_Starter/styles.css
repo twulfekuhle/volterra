@@ -148,11 +148,11 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   display: block;
 }
 
-/* Leadership Team (DARK THEME) */
-.leadership-section { padding: 100px 5vw; background: #081118; border-top: 1px solid #1a2730; }
+/* Leadership Team (LIGHT THEME) */
+.leadership-section { padding: 100px 5vw; background: #f5f6f6; border-top: 1px solid #d5dadd; }
 .leadership-header { text-align: center; margin-bottom: 60px; }
-.leadership-header h2 { color: #fff; }
-.leadership-header p:not(.eyebrow) { color: #97a5ae; font-size: 18px; }
+.leadership-header h2 { color: #081118; }
+.leadership-header p:not(.eyebrow) { color: #4e5b64; font-size: 18px; }
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -164,9 +164,9 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .team-photo {
   width: 100%;
   aspect-ratio: 4/5;
-  background: #0c161d;
-  border: 1px solid #1a2730;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: #ffffff;
+  border: 1px solid #d5dadd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 4px;
@@ -181,10 +181,10 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 }
 .team-card:hover .team-photo {
   border-color: #ff3333;
-  box-shadow: 0 12px 30px rgba(255,51,51,0.25);
+  box-shadow: 0 12px 30px rgba(255,51,51,0.18);
   transform: translateY(-5px);
 }
-.team-card h3 { font-size: 20px; margin: 0 0 5px; color: #fff; text-transform: uppercase; }
+.team-card h3 { font-size: 20px; margin: 0 0 5px; color: #081118; text-transform: uppercase; }
 .team-title { color: #ff3333; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; margin: 0; line-height: 1.4; }
 
 /* Partnership Section */
@@ -204,16 +204,13 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
 .value-card h3 { font-size: 24px; text-transform: uppercase; margin: 0 0 15px; color: #fff; }
 .value-card p { color: #97a5ae; margin: 0; line-height: 1.6; }
 
-/* Campus Section (LIGHT THEME) */
-.about-campus.light-campus {
+/* Campus Section (DARK THEME) */
+.about-campus {
   grid-template-columns: 1fr 1.1fr;
   align-items: center;
-  background: #f5f6f6;
-  color: #121a20;
-  border-top: 1px solid #d5dadd;
+  background: #0c1820;
+  border-top: 1px solid #1a2730;
 }
-.about-campus.light-campus h2 { color: #081118; }
-.campus-sub { color: #4e5b64; font-size: 16px; margin: 0 0 20px; }
 .campus-photo-wrapper {
   width: 100%;
   height: 520px;
@@ -234,9 +231,10 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   flex-direction: column;
   justify-content: center;
 }
-.about-campus.light-campus .campus-list li { color: #4e5b64; font-size: 16px; margin-bottom: 18px; padding-left: 24px; position: relative; line-height: 1.6; }
-.about-campus.light-campus .campus-list li strong { color: #081118; }
-.about-campus.light-campus .campus-list li::before { content: '→'; position: absolute; left: 0; color: #ff3333; font-weight: bold; }
+.about-campus .campus-list { list-style: none; padding: 0; margin: 30px 0 0; }
+.about-campus .campus-list li { margin-bottom: 20px; padding-left: 24px; position: relative; color: #aeb8bf; font-size: 16px; line-height: 1.6; }
+.about-campus .campus-list li strong { color: #fff; }
+.about-campus .campus-list li::before { content: '→'; position: absolute; left: 0; color: #ff3333; font-weight: bold; }
 
 /* =========================================
    CONTACT PAGE STYLES
@@ -306,7 +304,7 @@ footer span { display: block; color: #97a5ae; line-height: 1.7; text-transform: 
   .about-origin-grid { grid-template-columns: 1fr; gap: 35px; }
   .about-feature-img-wrapper { height: 280px; max-height: 280px; }
   
-  .about-campus.light-campus { grid-template-columns: 1fr; }
+  .about-campus { grid-template-columns: 1fr; }
   .campus-photo-wrapper { height: 320px; max-height: 320px; }
   .campus-content-block { padding: 40px 5vw; }
 
